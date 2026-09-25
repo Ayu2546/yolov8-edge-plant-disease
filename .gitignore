@@ -222,3 +222,6 @@ __marimo__/
 
 # YOLO model weights
 *.pt
+
+# YOLO training results
+/runs/
