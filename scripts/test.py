@@ -1,8 +1,23 @@
+import argparse
+from pathlib import Path
 from ultralytics import YOLO
 
-
 def main():
-    model = YOLO("runs/classify/yolov8n-cls/weights/best.pt")
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--model",
+        type=str,
+        required=True,
+    )
+
+    args = parser.parse_args()
+    
+    model_name = Path(args.model).stem
+
+    model = YOLO(
+        f"runs/classify/{model_name}/weights/best.pt"
+    )
 
     metrics = model.val(
         data="data/strawberry",
