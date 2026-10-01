@@ -1,7 +1,4 @@
-# Handle file and directory paths.
 from pathlib import Path
-
-# Randomize the order of images.
 import random
 
 # Copy files.

@@ -3,6 +3,7 @@ import argparse
 
 from ultralytics import YOLO
 
+
 def main():
     # Parse command-line arguments.
     parser = argparse.ArgumentParser()
